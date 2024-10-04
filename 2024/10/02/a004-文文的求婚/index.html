@@ -9,8 +9,10 @@
 
 
 
-    <meta name="description" content="巢狀判斷要注意條件可以被400整除但不能被100除
-12345678910111213141516#include&amp;lt;stdio.h&amp;gt;int main()&amp;#123;    int d;    while (scanf(&amp;quot;%d&amp;quot;,&amp;amp;d)!=EOF)&amp;#123; "/>
+    <meta name="description" content="AC
+
+巢狀判斷要注意條件可以被400整除但不能被100除
+12345678910111213141516#include&amp;lt;stdio.h&amp;gt;int main()&amp;#123;    int d;    while (scanf(&amp;quot;%d&amp;quot;,&amp;amp;d)!=EOF)&amp;#1"/>
 
 
 <!--Author-->
@@ -25,8 +27,10 @@
 
 <!--Open Graph Description-->
 
-    <meta property="og:description" content="巢狀判斷要注意條件可以被400整除但不能被100除
-12345678910111213141516#include&amp;lt;stdio.h&amp;gt;int main()&amp;#123;    int d;    while (scanf(&amp;quot;%d&amp;quot;,&amp;amp;d)!=EOF)&amp;#123; "/>
+    <meta property="og:description" content="AC
+
+巢狀判斷要注意條件可以被400整除但不能被100除
+12345678910111213141516#include&amp;lt;stdio.h&amp;gt;int main()&amp;#123;    int d;    while (scanf(&amp;quot;%d&amp;quot;,&amp;amp;d)!=EOF)&amp;#1"/>
 
 
 <!--Open Graph Site Name-->
@@ -150,7 +154,7 @@
     
         <span class="post-meta-split">&nbsp;|&nbsp;</span>
         <i class="far fa-file-word fa-fw"></i>
-        122
+        123
     
 
     
@@ -166,7 +170,9 @@
     
 </span>  
                 
-                <p>巢狀判斷<br>要注意條件可以被400整除但不能被100除</p>
+                <div class="card bg-success  text-white my-3"><div class="card-body"><p>AC</p></div></div>
+
+<p>巢狀判斷<br>要注意條件可以被400整除但不能被100除</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> d;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;d)!=EOF)&#123;</span><br><span class="line">        <span class="keyword">if</span> (d%<span class="number">4</span>==<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span> (d%<span class="number">100</span>!=<span class="number">0</span> || d%<span class="number">400</span> == <span class="number">0</span>)&#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;閏年\n&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (d%<span class="number">100</span> == <span class="number">0</span>)&#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;平年\n&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;平年\n&quot;</span>); </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (<span class="number">1</span>):</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        d = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (d % <span class="number">4</span> == <span class="number">0</span>):</span><br><span class="line">            <span class="keyword">if</span> (d % <span class="number">100</span> !=<span class="number">0</span> <span class="keyword">or</span> d%<span class="number">400</span> == <span class="number">0</span>):</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;閏年&quot;</span>)</span><br><span class="line">            <span class="keyword">else</span>:<span class="built_in">print</span>(<span class="string">&quot;平年&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:<span class="built_in">print</span>(<span class="string">&quot;平年&quot;</span>)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
