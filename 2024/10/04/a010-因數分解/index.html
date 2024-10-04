@@ -9,10 +9,7 @@
 
 
 
-    <meta name="description" content="字串與函示的應用AC
-
-
-12345678910111213#include&amp;lt;stdio.h&amp;gt;#include&amp;lt;string.h&amp;gt;int main()&amp;#123;    char arr[1000];        scanf(&amp;quot;%s&amp;quot;,arr);    "/>
+    <meta name="description" content="C 語言寫法12345678910111213141516171819202122232425#include&amp;lt;stdio.h&amp;gt;int main()&amp;#123;    int num;    scanf(&amp;quot;%d&amp;quot;,&amp;amp;num);    for (int i = "/>
 
 
 <!--Author-->
@@ -22,15 +19,12 @@
 
 <!--Open Graph Title-->
 
-    <meta property="og:title" content="a009. 解碼器"/>
+    <meta property="og:title" content="a010. 因數分解"/>
 
 
 <!--Open Graph Description-->
 
-    <meta property="og:description" content="字串與函示的應用AC
-
-
-12345678910111213#include&amp;lt;stdio.h&amp;gt;#include&amp;lt;string.h&amp;gt;int main()&amp;#123;    char arr[1000];        scanf(&amp;quot;%s&amp;quot;,arr);    "/>
+    <meta property="og:description" content="C 語言寫法12345678910111213141516171819202122232425#include&amp;lt;stdio.h&amp;gt;int main()&amp;#123;    int num;    scanf(&amp;quot;%d&amp;quot;,&amp;amp;num);    for (int i = "/>
 
 
 <!--Open Graph Site Name-->
@@ -57,7 +51,7 @@
 
 <!-- Title -->
 
-<title>a009. 解碼器 | code-note</title>
+<title>a010. 因數分解 | code-note</title>
 
 <!-- Bootstrap Core CSS -->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
@@ -126,7 +120,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 text-center">
                 <div class="post-heading text-white">
-                    <h1>a009. 解碼器</h1>
+                    <h1>a010. 因數分解</h1>
                     
                 </div>
             </div>
@@ -148,13 +142,13 @@
     
         <span class="post-meta-split">&nbsp;|&nbsp;</span>
         <i class="far fa-calendar-check fa-fw"></i>
-        2024-10-02
+        2024-10-04
     
     <!-- word count and read count -->
     
         <span class="post-meta-split">&nbsp;|&nbsp;</span>
         <i class="far fa-file-word fa-fw"></i>
-        78
+        225
     
 
     
@@ -170,36 +164,19 @@
     
 </span>  
                 
-                <hr>
-<h1 id="字串與函示的應用"><a href="#字串與函示的應用" class="headerlink" title="字串與函示的應用"></a>字串與函示的應用</h1><div class="card bg-success  text-white my-3"><div class="card-body"><p>AC</p></div></div>
+                <h1 id="C-語言寫法"><a href="#C-語言寫法" class="headerlink" title="C 語言寫法"></a>C 語言寫法</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;num);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span> ; i&lt;=num ; i++)&#123;<span class="comment">//要小等於num因為如果因數只有自己次方會變一</span></span><br><span class="line">        <span class="type">int</span> power = <span class="number">0</span>;<span class="comment">//找出重複的因數</span></span><br><span class="line">        <span class="keyword">if</span> (num%i == <span class="number">0</span>)&#123;<span class="comment">//一個一個找</span></span><br><span class="line">            <span class="keyword">while</span>(num%i == <span class="number">0</span>)&#123;<span class="comment">//如果是那個數的因數就一直除</span></span><br><span class="line">                num/=i;</span><br><span class="line">                power++;<span class="comment">//把次方紀錄下來</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (power!=<span class="number">0</span>)&#123;<span class="comment">// 避免次方是0已經除不進還列印的狀況</span></span><br><span class="line">            <span class="keyword">if</span> (power == <span class="number">1</span>)&#123;<span class="comment">//如果因數只有自己</span></span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,i);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;%d^%d&quot;</span>,i,power);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (num!=<span class="number">1</span>)&#123;<span class="comment">//沒有除到一</span></span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot; * &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">char</span> arr[<span class="number">1000</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,arr);</span><br><span class="line">    <span class="type">int</span> str = <span class="built_in">strlen</span>(arr);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; str ; i++)&#123;</span><br><span class="line">        arr[i] -= <span class="number">7</span>;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="built_in">input</span>()</span><br><span class="line">k = <span class="built_in">len</span>(a)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(k):</span><br><span class="line">    d = <span class="built_in">ord</span>(a[i])-<span class="number">7</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">chr</span>(d),end=<span class="string">&quot;&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="python寫法"><a href="#python寫法" class="headerlink" title="python寫法"></a>python寫法</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">i = <span class="number">2</span></span><br><span class="line"><span class="keyword">while</span> (i&lt;=num):</span><br><span class="line">    power = <span class="number">0</span></span><br><span class="line">    <span class="keyword">if</span> (num%i == <span class="number">0</span>):</span><br><span class="line">        <span class="keyword">while</span>(num%i == <span class="number">0</span>):</span><br><span class="line">            num//=i</span><br><span class="line">            power+=<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> (power&gt;<span class="number">0</span>):</span><br><span class="line">        <span class="keyword">if</span> (power == <span class="number">1</span>):<span class="built_in">print</span>(i,end=<span class="string">&quot;&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:<span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;i&#125;</span>^<span class="subst">&#123;power&#125;</span>&quot;</span>,end=<span class="string">&quot;&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> (num!=<span class="number">1</span>):<span class="built_in">print</span>(<span class="string">&quot; * &quot;</span>,end=<span class="string">&quot;&quot;</span>)</span><br><span class="line">    i+=<span class="number">1</span></span><br></pre></td></tr></table></figure>
             </div>
 
             <!-- Post information -->
             
-    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 post-tags">
-        
-            <i class="fas fa-tag" style="vertical-align: middle;font-size: .8rem;"></i>
-            tags:&nbsp;
-            
-            
-        
-            <a href="/codenote/tags/zero-judge/">#zero judge</a>
-        
-    </div>
-
             
     <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
         <ul class="pagination d-block text-center">
             
-                <li class="previous page-item d-inline"><a href="/codenote/2024/10/04/a010-%E5%9B%A0%E6%95%B8%E5%88%86%E8%A7%A3/" class="page-link float-left">&larr;  Newer</a></li>
             
-            
-                <li class="next page-item d-inline"><a href="/codenote/2024/10/02/006-%E4%B8%80%E5%85%83%E4%BA%8C%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F/" class="page-link float-right">Older  &rarr;</a></li>
+                <li class="next page-item d-inline"><a href="/codenote/2024/10/02/a009-%E8%A7%A3%E7%A2%BC%E5%99%A8/" class="page-link float-right">Older  &rarr;</a></li>
             
         </ul>
     </div>
